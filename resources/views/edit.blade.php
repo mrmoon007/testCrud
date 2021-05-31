@@ -16,7 +16,7 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control" name="email" value="{{$data->email}}" id="exampleInputEmail1" aria-describedby="emailHelp">
-        
+
         </div>
         <div class="row">
             <div class="col-6">
@@ -41,7 +41,7 @@
                         </label>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col-6">
                 <label for="exampleInputPassword1" class="form-label">Status</label>
@@ -54,15 +54,15 @@
         </div>
         <div class="mb-3 form-group">
             <div>
-                <label for="exampleInputEmail1">Image</label>
-                <img src="{{ asset($data->image) }}" style="height: 80px; wigdth: 70px;" >
+                <label class="d-block" for="exampleInputEmail1">Image</label>
+                <img src="{{ asset($data->image) }}" style="height: 200px; wigdth: 300px;" >
                 <input type="file" name="image" class="form-control" id="" placeholder="">
                 <input type="hidden" name="old_image" value="{{ $data->image  }}">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
-    
+
 @endsection
 
 

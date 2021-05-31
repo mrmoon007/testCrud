@@ -31,16 +31,16 @@
           <td>{{$item->email}}</td>
           <td>{{$item->phone}}</td>
           <th>{{$item->gender}}</th>
-          <td>{{$item->active}}</td>
-          
+          <td>{{$item->active?"Active":'Inactive'}}</td>
+
           <td>
             <a href="{{route('edit.customer',$item->id)}}" class="btn btn-sm btn-success">Edit</a>
-            <a href="" class="btn btn-sm btn-info">View</a>
+            <a href="{{route('view.customer',$item->id)}}" class="btn btn-sm btn-info">View</a>
             <a href="{{route('delete.customer',$item->id)}}" class="btn btn-sm btn-danger">Delete</a>
           </td>
         </tr>
       @endforeach
     </tbody>
   </table>
-    
+
 @endsection

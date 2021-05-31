@@ -17,7 +17,7 @@
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-          
+
         </div>
         <div class="row">
             <div class="col-6">
@@ -42,7 +42,7 @@
                         </label>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col-6">
                 <div class="mb-3 form-check">
@@ -50,15 +50,15 @@
                     <label class="form-check-label" for="exampleCheck1">Active</label>
                 </div>
             </div>
-    
+
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Profile Photo</label>
             <input type="file" class="form-control" name="image" id="exampleInputEmail1" aria-describedby="emailHelp">
-            
+
           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 </div>
-    
+
 @endsection

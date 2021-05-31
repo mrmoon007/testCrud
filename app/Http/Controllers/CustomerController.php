@@ -11,7 +11,7 @@ class CustomerController extends Controller
     {
         $data=CustomerModel::get();
         return view('index',compact('data'));
-        
+
     }
 
     public function store(Request $request)
@@ -49,7 +49,7 @@ class CustomerController extends Controller
 
     public function create()
     {
-        
+
         return view('customer');
     }
 
@@ -57,7 +57,7 @@ class CustomerController extends Controller
     {
         $data=CustomerModel::find($id);
         return view('edit',compact('data'));
-        
+
     }
 
     public function update(Request $request,$id)
@@ -91,7 +91,7 @@ class CustomerController extends Controller
 
         ]);
 
-        return redirect()->route('all.customer');
+        return redirect()->route('index.customer');
     }
 
     public function delete($id){
@@ -100,5 +100,10 @@ class CustomerController extends Controller
         unlink($old_image);
         CustomerModel::find($id)->delete();
         return redirect()->back();
+    }
+
+    public function view($id){
+        $item=CustomerModel::find($id);
+        return view('view',compact('item'));
     }
 }

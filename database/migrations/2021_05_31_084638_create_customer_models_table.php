@@ -16,11 +16,11 @@ class CreateCustomerModelsTable extends Migration
         Schema::create('customer_models', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('phone');
             $table->string('gender');
-            $table->string('active');
-            $table->string('image');
+            $table->string('active')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
