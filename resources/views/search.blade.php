@@ -1,6 +1,6 @@
 @extends('master')
 @section('title')
-    index customer
+    search customer
 @endsection
 @section('content')
 

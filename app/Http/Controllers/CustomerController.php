@@ -43,7 +43,7 @@ class CustomerController extends Controller
             'image' => $last_img,
         ]);
 
-       return view('customer');
+        return redirect()->route('index.customer');
 
     }
 
@@ -105,5 +105,15 @@ class CustomerController extends Controller
     public function view($id){
         $item=CustomerModel::find($id);
         return view('view',compact('item'));
+    }
+
+    public function search(){
+        $search=$_GET['searchdata'];
+        $data=CustomerModel::where('name','LIKE','%'.$search.'%')
+                                   ->orWhere('email','LIKE','%'.$search.'%')
+                                   ->orWhere('phone','LIKE','%'.$search.'%')
+                                   ->get();
+
+        return view('search',compact('data'));
     }
 }
