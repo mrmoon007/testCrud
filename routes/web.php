@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\StripeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,8 @@ Route::get('/customer/delete/{id}', [CustomerController::class,'delete'])->name(
 Route::get('/customer/view/{id}', [CustomerController::class,'view'])->name('view.customer');
 Route::post('/customer/update/{id}', [CustomerController::class,'update'])->name('update.customer');
 Route::get('/customer/search', [CustomerController::class,'search'])->name('search.customer');
+
+// stripe route here
+
+Route::get('stripe', [StripeController::class, 'stripe']);
+Route::post('stripe', [StripeController::class, 'stripePost'])->name('stripe.post');
